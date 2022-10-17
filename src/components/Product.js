@@ -9,6 +9,11 @@ export function Product(props) {
     const handleAddBtnClicked = e => {
         props.onAddClick(productId);
     };
+
+    const handleSubBtnClicked = e => {
+        props.onSubClick(productId);
+    };
+
     return <>
         <div className="col-2">
             <img className="img-fluid" src="https://i.imgur.com/HKOFQYa.jpeg" alt=""/>
@@ -20,6 +25,7 @@ export function Product(props) {
         <div className="col text-center price">{price}원</div>
         <div className="col text-end action">
             <button onClick={handleAddBtnClicked} className="btn btn-small btn-outline-dark">추가</button>
+            <button onClick={handleSubBtnClicked} className="btn btn-small btn-outline-dark">삭제</button>
         </div>
     </>
 }
